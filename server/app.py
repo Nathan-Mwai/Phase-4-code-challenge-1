@@ -89,7 +89,7 @@ def hero_powers():
         hero_id = request.json.get('hero_id')
 
         #Could not figure out how to import validation
-        valid_strengths = {'Strong', 'Weak', 'Average'}
+        valid_strengths = ['Strong', 'Weak', 'Average']
         if strength not in valid_strengths:
             return make_response({"errors": ["validation errors"]}, 400)
 
